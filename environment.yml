@@ -1,0 +1,13 @@
+name: amp-prioritizer
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.11
+  - mmseqs2
+  - cd-hit
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - -e .
+      - pytest>=8

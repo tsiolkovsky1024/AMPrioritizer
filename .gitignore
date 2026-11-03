@@ -1,0 +1,18 @@
+# Data and checkpoints are large; weights are distributed separately.
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+runs/
+data/negatives/
+data/mlm_corpus/
+data/current/genomes/
+.hf_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+.DS_Store

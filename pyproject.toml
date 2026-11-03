@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amp-prioritizer"
+version = "2.0.0"
+description = "Censoring-aware modeling of threshold-reported MIC records for multi-species antimicrobial peptide prioritization"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Yanchao Xu" },
+  { name = "Yinghui Jiang" },
+  { name = "Lilong Wen" },
+]
+keywords = ["antimicrobial peptides", "MIC prediction", "censored regression", "protein language model"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+dependencies = [
+  "numpy>=1.26,<2",
+  "pandas>=2.2",
+  "pyarrow>=15",
+  "scipy>=1.11",
+  "scikit-learn>=1.5",
+  "biopython>=1.84",
+  "PyYAML>=6.0",
+  "torch>=2.4",
+  "transformers>=4.46",
+  "accelerate>=1.0",
+  "peft>=0.13",
+  "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+amp-prioritizer = "amp_prioritizer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/tsiolkovsky1024/AMPrioritizer"
+Issues = "https://github.com/tsiolkovsky1024/AMPrioritizer/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+amp_prioritizer = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

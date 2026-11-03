@@ -1,0 +1,58 @@
+{
+  "mic": {
+    "policy": {
+      "unit": "dedup_key + canonical target species",
+      "exact": "geometric mean",
+      "right_censored": "maximum lower bound",
+      "left_censored": "minimum upper bound",
+      "mixed_observation_types": "exclude entire unit"
+    },
+    "input_measurements": 192047,
+    "input_groups": 112078,
+    "retained_groups": 106728,
+    "excluded_mixed_groups": 3834,
+    "excluded_mixed_measurements": 28430,
+    "excluded_orphan_groups": 1516,
+    "mixed_groups_by_signature": {
+      "exact+left": 88,
+      "exact+right": 3706,
+      "exact+right+left": 26,
+      "right+left": 14
+    },
+    "mixed_measurements_by_signature": {
+      "exact+left": 378,
+      "exact+right": 20236,
+      "exact+right+left": 7786,
+      "right+left": 30
+    },
+    "retained_groups_by_type": {
+      "exact": 83516,
+      "right": 22742,
+      "left": 470
+    },
+    "measurements_by_source": {
+      "DBAASP": 117248,
+      "CAMPR4": 61301,
+      "DRAMP": 13498
+    }
+  },
+  "hemolysis": {
+    "policy": "same as MIC",
+    "input_measurements": 19242,
+    "input_groups": 9389,
+    "retained_groups": 8556,
+    "excluded_mixed_groups": 755,
+    "excluded_orphan_groups": 78,
+    "mixed_groups_by_signature": {
+      "exact+left": 44,
+      "exact+right": 700,
+      "exact+right+left": 7,
+      "right+left": 4
+    },
+    "retained_groups_by_type": {
+      "exact": 7006,
+      "right": 1511,
+      "left": 39
+    }
+  }
+}

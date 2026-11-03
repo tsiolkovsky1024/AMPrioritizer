@@ -1,0 +1,11 @@
+{
+  "n_peptides": 68421,
+  "n_with_mic": 20126,
+  "n_with_hemo": 8556,
+  "top_species_n": 20,
+  "mic_long_rows": 106728,
+  "mic_long_censored_right_frac": 0.2130837268570572,
+  "mic_long_censored_left_frac": 0.004403717862229218,
+  "mic_excluded_mixed_groups": 3834,
+  "hemolysis_excluded_mixed_groups": 755
+}

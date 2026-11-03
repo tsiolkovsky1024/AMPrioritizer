@@ -1,0 +1,49 @@
+seed: 2
+max_len: 100
+
+predictor_ckpt: runs/full/best.pt
+predictor_config: configs/full.yaml
+generator_ckpt: runs/stage3_gen/best.pt
+data_dir: data/current
+
+sft:
+  n_candidates: 5000
+  top_k: 500
+  candidate_temperature: 1.0
+  candidate_top_p: 0.95
+  sample_batch_size: 64
+  anchor_mic_lo: 0.1
+  anchor_mic_hi: 32.0
+  anchor_weight: 2.0
+  len_lo: 5
+  len_hi: 60
+  min_anchor_count: 30
+
+train:
+  epochs: 4
+  batch_size: 32
+  num_workers: 2
+  lr: 2.0e-4
+  wd: 0.01
+  warmup_ratio: 0.05
+  alpha_length: 0.1
+  prior_temperature: 1.0
+  grad_clip: 1.0
+  log_every: 10
+  save_every: 10
+
+sample:
+  n_seqs: 2000
+  batch_size: 64
+  temperature: 1.0
+  top_p: 0.95
+  min_len: 5
+  max_len: 60
+
+screen:
+  top_k: 50
+  min_amp: 0.6
+  min_sp: 0.5
+  min_hc50_log10: 2.0
+  lambda_div: 0.1
+  batch: 32

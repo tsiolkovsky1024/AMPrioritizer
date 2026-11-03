@@ -1,0 +1,27 @@
+# Stage 3 - latent CVAE + autoregressive decoder + length head.
+# Prerequisite: scripts/cache_latents.py has written the latent cache.
+seed: 42
+hf_cache_dir: .hf_cache
+out_dir: runs/stage3_gen
+data:
+  max_len: 100
+model:
+  name: facebook/esm2_t33_650M_UR50D
+  pooled_dim: 1280
+  z_dim: 128
+  hidden_dim: 512
+  ar_d_model: 512
+  ar_n_layers: 4
+train:
+  epochs: 30
+  batch_size: 64
+  num_workers: 4
+  lr: 0.0003
+  wd: 0.01
+  warmup_ratio: 0.05
+  grad_clip: 1.0
+  log_every: 50
+  save_every: 1000
+  beta_period: 10000
+  max_beta: 0.5
+  free_bits: 0.5

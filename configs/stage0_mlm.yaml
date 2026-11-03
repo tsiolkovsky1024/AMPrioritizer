@@ -1,0 +1,29 @@
+# Stage 0 - continued masked-LM adaptation of ESM-2 650M (LoRA) on AMP sequences.
+# The MLM corpus FASTA is optional; see data/DATA.md.
+seed: 42
+mixed_precision: fp16
+grad_accum: 2
+hf_cache_dir: .hf_cache
+out_dir: runs/stage0_mlm
+data:
+  parquet: data/current/peptides.parquet
+  mlm_corpus_fasta: data/mlm_corpus/peptideatlas_cdhit90.fasta
+  max_len: 200
+model:
+  name: facebook/esm2_t33_650M_UR50D
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  gradient_checkpointing: true
+train:
+  epochs: 2
+  batch_size: 8
+  num_workers: 4
+  lr: 0.0001
+  wd: 0.01
+  warmup_ratio: 0.05
+  mask_ratio: 0.15
+  mask_span: 3
+  grad_clip: 1.0
+  log_every: 50
+  eval_every: 2000

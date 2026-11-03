@@ -1,0 +1,85 @@
+# Full multi-task family (adds physchem, hemolysis and selectivity terms).
+# Reference configuration of the frozen model (two-phase curriculum enabled, seed 2).
+seed: 2
+model_family: full
+stage: 2b
+mixed_precision: fp16
+grad_accum: 2
+hf_cache_dir: .hf_cache
+out_dir: runs/full
+data:
+  data_dir: data/current
+  max_len: 200
+  active_threshold_log10: 1.5
+  physchem_cache_dir: data/current/physchem
+  binary_val_csv: data/current/external_binary/binary_val.csv
+  neg_fasta: data/negatives/AMPlify_non_AMP_train_imbalanced.fa
+  neg_log10_mic: 3.91
+model:
+  name: facebook/esm2_t33_650M_UR50D
+  finetune_mode: full
+  head_hidden: 512
+  head_dropout: 0.3
+  gradient_checkpointing: true
+  species_encoder:
+    type: kmer_mlp
+    kmer_features_path: data/current/species_kmer_features.npz
+    mlp_hidden: 512
+train:
+  epochs: 5
+  per_device_batch_size: 8
+  num_workers: 4
+  lr_backbone: 1.0e-05
+  lr_head: 0.0001
+  wd: 0.01
+  warmup_ratio: 0.05
+  alpha_amp: 1.0
+  alpha_species: 0.5
+  alpha_censored: 0.3
+  censor_event_multiplier: 1.0
+  alpha_huber_active: 0.5
+  alpha_lambda: 0.3
+  alpha_listmle: 0.2
+  alpha_physchem: 0.1
+  alpha_hemo: 0.2
+  alpha_selectivity: 0.01
+  alpha_consistency: 0.01
+  label_smoothing: 0.2
+  huber_delta: 1.0
+  species_reduction: cell_mean
+  censoring_mode: proper
+  grouped_batch:
+    enabled: false
+    species_per_batch: 2
+    samples_per_species: 2
+    negative_fraction: 0.5
+  curriculum:
+    enabled: true
+    switch_fraction: 0.4
+    phase2:
+      alpha_amp: 0.2
+      alpha_species: 0.25
+      alpha_censored: 0.2
+      alpha_huber_active: 0.5
+      alpha_lambda: 0.3
+      alpha_listmle: 0.1
+      alpha_physchem: 0.1
+      alpha_hemo: 0.2
+      alpha_selectivity: 0.01
+      alpha_consistency: 0.01
+      label_smoothing: 0.1
+  grad_clip: 1.0
+  log_every: 20
+  eval_every: 500
+  save_last: false
+selection_protocol:
+  split: validation
+  test_used_for_selection: false
+  confirmation_top_k: 3
+  guardrails:
+    max_mae_delta: 0.03
+    max_censoring_drop: 0.03
+    max_amp_auroc_drop: 0.005
+    max_amp_auprc_drop: 0.01
+    max_amp_f1_drop: 0.01
+    max_hemo_mae_delta: 0.05

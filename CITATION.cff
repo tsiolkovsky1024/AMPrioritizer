@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article below."
+title: "AMPrioritizer: Censoring-Aware Modeling of Threshold-Reported MIC Records for Multi-species Antimicrobial Peptide Prioritization"
+type: software
+version: 2.0.0
+license: MIT
+repository-code: "https://github.com/tsiolkovsky1024/AMPrioritizer"
+authors:
+  - family-names: Xu
+    given-names: Yanchao
+    affiliation: Zhejiang University
+  - family-names: Jiang
+    given-names: Yinghui
+    affiliation: Xiamen University
+  - family-names: Wen
+    given-names: Lilong
+    affiliation: Zhejiang University
+    email: wenlilong@zju.edu.cn
+keywords:
+  - antimicrobial peptides
+  - minimum inhibitory concentration
+  - censored regression
+  - protein language model
+  - peptide prioritization
+preferred-citation:
+  type: article
+  title: "AMPrioritizer: Censoring-Aware Modeling of Threshold-Reported MIC Records for Multi-species Antimicrobial Peptide Prioritization"
+  journal: Bioinformatics
+  year: 2026
+  authors:
+    - family-names: Xu
+      given-names: Yanchao
+    - family-names: Jiang
+      given-names: Yinghui
+    - family-names: Wen
+      given-names: Lilong
+  # doi: tsiolkovsky1024

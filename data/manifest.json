@@ -1,0 +1,176 @@
+{
+  "dataset_version": "v2_censor_safe",
+  "protocol": "canonical_mmseqs80_v2_censor_safe",
+  "cluster_identity": "MMseqs2, 80% identity / 80% coverage",
+  "cluster_cross_split_leaks": 0,
+  "counts": {
+    "peptides": 68421,
+    "mic_units": 106728,
+    "mic_exact": 83516,
+    "mic_right_censored": 22742,
+    "mic_left_censored": 470,
+    "clusters": 30782,
+    "split_peptides": {
+      "train": 55269,
+      "validation": 6553,
+      "test": 6599
+    },
+    "split_mic_labelled": {
+      "train": 17546,
+      "validation": 2074,
+      "test": 1946
+    },
+    "split_units": {
+      "train": 86799,
+      "validation": 10796,
+      "test": 9133
+    }
+  },
+  "files": [
+    {
+      "path": "current/README.md",
+      "bytes": 568,
+      "sha256": "6983002f4773976b1c06cbef4d7db4db6e69c024b8d86b92803abfad0186dd29"
+    },
+    {
+      "path": "current/_summary.json",
+      "bytes": 309,
+      "sha256": "6648d64e317590d182fe19f24bd29a6388c0a867d79bb07eb6eaa671c3e4a18b"
+    },
+    {
+      "path": "current/censoring_aggregation_audit.json",
+      "bytes": 1440,
+      "sha256": "8ff9a7e8669e71e57653518098c526a3a759647227e579f21498b26301f74756"
+    },
+    {
+      "path": "current/cluster_assignments.parquet",
+      "bytes": 4966851,
+      "sha256": "423de35104980c5376b4f8c0795bb8dc9943a95bff57f11739809c4decef456b"
+    },
+    {
+      "path": "current/clusters_mmseqs80.tsv",
+      "bytes": 1028936,
+      "sha256": "30038dc43ef4121459774dbadd0dbb46b5ad6054ef70f3ad49d0f127aa7bb2e6"
+    },
+    {
+      "path": "current/external_binary/binary_test.csv",
+      "bytes": 166202,
+      "sha256": "df711586976e822e9cf3991241760d870e9b4b40531bdc94926333ef9a6928b3"
+    },
+    {
+      "path": "current/external_binary/binary_test.fasta",
+      "bytes": 216809,
+      "sha256": "eac62607dbffddf6c38ec285317b6a23cb2d2910220a3c5842e420087132fea5"
+    },
+    {
+      "path": "current/external_binary/binary_train.csv",
+      "bytes": 1331928,
+      "sha256": "235bedfe57adbfc8760ed21b277df1888b68886e020b07667bac937659645d09"
+    },
+    {
+      "path": "current/external_binary/binary_train.fasta",
+      "bytes": 1581304,
+      "sha256": "0a17b9330b528bd6bc2ced81a6caff394786b61995faa7f9c3d2c5b0c2d63ac4"
+    },
+    {
+      "path": "current/external_binary/binary_val.csv",
+      "bytes": 69890,
+      "sha256": "f3efd2060ce5648c132711611526509cc7425ab46ab94755df9a72ac4708c2a7"
+    },
+    {
+      "path": "current/external_binary/binary_val.fasta",
+      "bytes": 95956,
+      "sha256": "6cec9bb7fd15ad0c9faa481a5a721893d4a884ecd35be12b0445e40f3d5d00ed"
+    },
+    {
+      "path": "current/external_binary/mic_ec_test.csv",
+      "bytes": 89468,
+      "sha256": "e545b9e7bf5a305275278b36cdc0596aff647d058efa104964a5b0623b815a78"
+    },
+    {
+      "path": "current/external_binary/mic_ec_train.csv",
+      "bytes": 944238,
+      "sha256": "f406efac7b876988acfacdd148f19f3d82194bd7ae7239ddbea2a1f559812923"
+    },
+    {
+      "path": "current/external_binary/mic_ec_val.csv",
+      "bytes": 104347,
+      "sha256": "cca0d35322bb656f0b0c4265f7185aed460dd34200782f48e50d0bc1d114134d"
+    },
+    {
+      "path": "current/external_binary/mic_sa_test.csv",
+      "bytes": 85958,
+      "sha256": "a2d99db9aa4146090b67517398cab84457b235cd9a95a9f0a0be76f244623ab2"
+    },
+    {
+      "path": "current/external_binary/mic_sa_train.csv",
+      "bytes": 860863,
+      "sha256": "c4db1034f615bba0c13b8a84a65d17e8590c3bdd14ff35556c3e5f347cbeb35d"
+    },
+    {
+      "path": "current/external_binary/mic_sa_val.csv",
+      "bytes": 102301,
+      "sha256": "307a206ac9726310eb5e0fa961de96e194f602866b18432401560d55059b4a30"
+    },
+    {
+      "path": "current/holdout_species_v2.json",
+      "bytes": 176,
+      "sha256": "3244e3a7e46382b3f17e76f2e529d9b58fef7dbce66c9e90d1efecec427824ba"
+    },
+    {
+      "path": "current/mic_holdout_v2.parquet",
+      "bytes": 30719,
+      "sha256": "e0ea0f33175b1ef19c29b2f8efefa8f68d90a478e001a11c138487380900eac9"
+    },
+    {
+      "path": "current/mic_long.parquet",
+      "bytes": 2056532,
+      "sha256": "15b97bbea368d4a119c94ffc71ab6e64e24d0898ad80bf8e25def659d6d3b632"
+    },
+    {
+      "path": "current/mic_wide.parquet",
+      "bytes": 1553579,
+      "sha256": "3fc1b6656978a8b8a81b069c3b849c10e582dec11f584b35a041e0b7ace81e29"
+    },
+    {
+      "path": "current/peptides.parquet",
+      "bytes": 4178668,
+      "sha256": "9080cc0643c1153a41b8ea6b1a3442b4d6f0f19344a64f84c70fc60374c9405c"
+    },
+    {
+      "path": "current/physchem/test.npz",
+      "bytes": 132544,
+      "sha256": "5b11c032396a5bf5b10ecdf93c6bb4cccb9ccd9cd0348e1b5c110f120c032e88"
+    },
+    {
+      "path": "current/physchem/train.npz",
+      "bytes": 1105944,
+      "sha256": "5545e2e83d097d54c5c480ba453f003eea4007ba645b9bd269431343008f2640"
+    },
+    {
+      "path": "current/physchem/val.npz",
+      "bytes": 131624,
+      "sha256": "0d9bd43554d19a79152a8e949ed5a2d6f369a4e06ca3bc2b2b0f6ac1727a58a6"
+    },
+    {
+      "path": "current/species_kmer_features.npz",
+      "bytes": 28405,
+      "sha256": "ccc487ad036436e38dc8dea8073a840bf5f142a348933075f75d3c0e97787254"
+    },
+    {
+      "path": "current/species_kmer_features_with_holdout.npz",
+      "bytes": 35350,
+      "sha256": "092ce2a2d455e8bcc644e92c5f9cdf14d50e3689ce0ccf670afd660d2b78d921"
+    },
+    {
+      "path": "current/splits.parquet",
+      "bytes": 2830378,
+      "sha256": "75dc3862f0ea43e081222769d8c28c8add0934627c58d619a95266b831957791"
+    },
+    {
+      "path": "current/top_species.json",
+      "bytes": 1303,
+      "sha256": "562a5fc0b7b1480f326bef8badcb8a58fac9630c31bc8aab25694fdd6ac48da7"
+    }
+  ]
+}
