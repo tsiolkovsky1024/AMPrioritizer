@@ -6,16 +6,7 @@ version: 2.0.0
 license: MIT
 repository-code: "https://github.com/tsiolkovsky1024/AMPrioritizer"
 authors:
-  - family-names: Xu
-    given-names: Yanchao
-    affiliation: Zhejiang University
-  - family-names: Jiang
-    given-names: Yinghui
-    affiliation: Xiamen University
-  - family-names: Wen
-    given-names: Lilong
-    affiliation: Zhejiang University
-    email: wenlilong@zju.edu.cn
+  - name: "The AMPrioritizer authors"
 keywords:
   - antimicrobial peptides
   - minimum inhibitory concentration
@@ -28,10 +19,4 @@ preferred-citation:
   journal: Bioinformatics
   year: 2026
   authors:
-    - family-names: Xu
-      given-names: Yanchao
-    - family-names: Jiang
-      given-names: Yinghui
-    - family-names: Wen
-      given-names: Lilong
-  # doi: tsiolkovsky1024
+    - name: "The AMPrioritizer authors"

@@ -10,9 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [
-  { name = "Yanchao Xu" },
-  { name = "Yinghui Jiang" },
-  { name = "Lilong Wen" },
+  { name = "The AMPrioritizer authors" },
 ]
 keywords = ["antimicrobial peptides", "MIC prediction", "censored regression", "protein language model"]
 classifiers = [

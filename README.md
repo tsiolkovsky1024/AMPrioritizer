@@ -121,9 +121,9 @@ tests/                  unit and data-integrity tests
 
 ## Model weights
 
-Trained checkpoints are not distributed with the repository. They can be requested from the
-corresponding author, and the configurations in this repository are sufficient to retrain
-the models.
+Trained checkpoints are not distributed with the repository. They can be requested by
+opening an issue, and the configurations in this repository are sufficient to retrain the
+models.
 
 ## Citation
 
@@ -134,7 +134,3 @@ If you use this work, please cite the article (see [`CITATION.cff`](CITATION.cff
 The source code is released under the [MIT License](LICENSE). The dataset in `data/` is
 derived from third-party resources that are governed by their own terms; see
 [`data/DATA.md`](data/DATA.md) before redistributing it.
-
-## Contact
-
-Lilong Wen (corresponding author), Zhejiang University — wenlilong@zju.edu.cn.
